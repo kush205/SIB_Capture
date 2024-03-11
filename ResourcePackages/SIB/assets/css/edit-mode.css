@@ -1,0 +1,49 @@
+.win .sfPageEditor .animate,
+.mac .sfPageEditor .animate {
+    filter: alpha(opacity=100);
+    opacity: 1
+}
+
+.sfPageEditor .btn {
+    position: relative !important
+}
+
+div#ZoneEditorToolboxContainer {
+    direction: ltr
+}
+
+.modal.fade.ng-isolate-scope.sf-designer-dlg.sf-backend-wrp {
+    direction: ltr;
+    text-align: left
+}
+
+.form-group.ng-scope label:before,
+.form-group.ng-scope label:after {
+    display: none
+}
+
+header.sf-top-toolbar.-toggle.-page-editor {
+    direction: ltr
+}
+
+.btn.ng-scope:after {
+    display: none !important
+}
+
+.sfPageEditor .menu-box {
+    z-index: 69
+}
+
+.sfPageEditor .main-header {
+    position: relative;
+    margin: 0 0 -116px
+}
+
+html .k-editor-inline .list-icon {
+    max-width: 7px;
+    margin: 0 9px 0 0
+}
+
+.sfPageEditor {
+    direction: ltr
+}
