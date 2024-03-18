@@ -17507,7 +17507,8 @@ h4 {
 }
 
 p {
-    font-size: 1.25em
+    font-size: 1.25em;
+    padding-left: 3%;
 }
 
 .btn {
@@ -17567,7 +17568,8 @@ p {
 }
 
 .btn.btn-primary {
-    color: #fff
+    color: #fff;
+    padding-left : 6%
 }
 
 .btn.btn-white {
