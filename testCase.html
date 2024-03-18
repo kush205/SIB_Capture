@@ -1,470 +1,603 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" > 
 <HTML>
-
-<HEAD>
-    <title>Create OnLIne Case</title>
-    <META http-equiv="Content-Type" content="text/html; charset=windows-1252">
-    <meta content="JavaScript" name="vs_defaultClientScript">
-</HEAD>
-
-<body bottomMargin="0" leftMargin="0" topMargin="0" rightMargin="0" MS_POSITIONING="GridLayout">
-    <form id="OnLineCaseForm" method="post"
-        action="https://presales.businessbywire.com/appsng8/ProcessAnonymous/OnlineLeadCapture?x=s2rsuht9cnx3lyqqcnda6spl7ncryg6ssbve8vm6yt6af9pnb9dg3ap5rgj8nshrxkq4xkkvttp7leynpxp9wvbl4ljxtytmmblsukcglncyl4f2y2fa">
-        <input type="hidden" name="debug" value="1"> <input type="hidden" name="debugEmail" value="james@crmnext.com">
-        <input type=hidden name="SuccessReturnURL" value="http://www.google.com"> <input type=hidden
-            name="FailureReturnURL" value="http://www.bing.com">
-        <table cellpadding="0" cellspacing="0" border="0" width="100%">
+   <HEAD>
+      <title>Create OnLIne Lead</title>
+      <META http-equiv="Content-Type" content="text/html; charset=windows-1252">
+      <meta content="JavaScript" name="vs_defaultClientScript">
+   </HEAD>
+   <body bottomMargin="0" leftMargin="0" topMargin="0" rightMargin="0" MS_POSITIONING="GridLayout">
+      <form id="OnLineLeadForm" method="post" action="https://presales.businessbywire.com/appsng8/ProcessAnonymous/OnlineLeadCapture?x=25xgkuqlsapsn67x4pygd2jkrwpnlq2m32l7dkr7cwcdg3x5vmskzybg7qm94mglgejc2hzre9crxw459bgcquyptz8tx5easx3xa33xyxzshafdpk6a">
+         <input type="hidden" name="debug" value="1" /> <input type="hidden" name="debugEmail" value="james@crmnext.com" /> <input type=hidden name="SuccessReturnURL" value="http://www.google.com" /> <input type=hidden name="FailureReturnURL" value="http://www.bing.com" /> 
+         <table cellpadding="0" cellspacing="0" border="0" width="100%">
             <tr>
-                <td width="100%" height="100%" valign="top">
-                    <table cellSpacing="0" cellPadding="0" width="100%" border="0">
-                        <colgroup>
-                            <col align="right" width="20%" />
-                            <col width="30%" />
-                            <col align="right" width="20%" />
-                            <col width="30%" />
-                        </colgroup>
-                        <tr>
-                            <td> Subject :&nbsp; </td>
-                            <td><input type="text" id="Subject" name="Subject" style="width:100px" /></td>
-                        </tr>
-                        <tr>
-                            <td> Details :&nbsp; </td>
-                            <td><input type="text" id="Detail" name="Detail" style="width:100px" /></td>
-                            <td> Company Name :&nbsp; </td>
-                            <td><input type="text" id="Company" name="Company" style="width:100px" placeholder="RD" /></td>
-                        </tr>
-                        <tr>
-                            <td>Product</td>
-                            <td>
-                                <select id="Product" name="Product" onchange="UpdateProductName();" style="width:100px">
-                                    <option value="1000262">6% Mortgage</option>
-                                    <option value="1321">Aaelaty Bi Aman</option>
-                                    <option value="1000080">Account</option>
-                                    <option value="1000297">Additional Personal Finance</option>
-                                    <option value="1000187">Agri Loan</option>
-                                    <option value="1230">AL AMIL Account</option>
-                                    <option value="1228">AL Jawhara</option>
-                                    <option value="1309">Arabi Extra Program</option>
-                                    <option value="130">ATM Debit Cards</option>
-                                    <option value="1000083">Auto Financing</option>
-                                    <option value="140">Auto Insurance</option>
-                                    <option value="1000118">Auto Loan</option>
-                                    <option value="1000259">Automobile Purchase Loan</option>
-                                    <option value="1000104">Basic Saving Account</option>
-                                    <option value="1000212">Basic Saving Deposit</option>
-                                    <option value="1000209">Basic Saving Deposit</option>
-                                    <option value="127">Basic Savings Account</option>
-                                    <option value="132">Bills Pay Facility</option>
-                                    <option value="149">Bonds</option>
-                                    <option value="1000192">Budshah School Education Finance</option>
-                                    <option value="1000121">Business Finance</option>
-                                    <option value="1177">Business Loan</option>
-                                    <option value="1000122">Business Vehicle Loan</option>
-                                    <option value="1000157">Call Deposit Account</option>
-                                    <option value="1000196">Car Loan for Used Cars</option>
-                                    <option value="1000195">Car Loan Scheme</option>
-                                    <option value="1000151">Car Loans</option>
-                                    <option value="1000217">Cash Certificate Scheme</option>
-                                    <option value="1000055">Cash Collection</option>
-                                    <option value="1000200">Cash Credit Scheme (Salaried Employees)</option>
-                                    <option value="1000126">Cash trading account</option>
-                                    <option value="1000129">Cash Trading Account</option>
-                                    <option value="1000315">Cashback Card</option>
-                                    <option value="1224">c-cash management</option>
-                                    <option value="1174">Cheque Max</option>
-                                    <option value="1000223">Child-care Deposit Scheme</option>
-                                    <option value="1000257">CHIP БАГЦ ТӨСЛИЙН ЗЭЭЛ</option>
-                                    <option value="1220">c-investment</option>
-                                    <option value="1217">C-Investment</option>
-                                    <option value="1000282">Classic Card</option>
-                                    <option value="1000276">Classic Credit Card</option>
-                                    <option value="1000321">Classic Visa</option>
-                                    <option value="1000198">Coaching Fee Loan Scheme</option>
-                                    <option value="1000185">Consumer Loan</option>
-                                    <option value="1000058">Consumer Loan</option>
-                                    <option value="1000256">Consumption Green Loan</option>
-                                    <option value="1000254">Consumption Purchase Loan</option>
-                                    <option value="128">Cool Savers Kiddie Account</option>
-                                    <option value="1000328">COOP Prepaid Card</option>
-                                    <option value="1000020">Corporate</option>
-                                    <option value="1260">Corporate Auto Finance</option>
-                                    <option value="1262">Corporate Auto Lease</option>
-                                    <option value="1180">Corporate Loan</option>
-                                    <option value="1287">Corporate Payroll Account</option>
-                                    <option value="126">Corporate Salary Account</option>
-                                    <option value="1290">Coupon Bearing Bond</option>
-                                    <option value="1000232">Credit Card</option>
-                                    <option value="1000079">Credit Cards</option>
-                                    <option value="1288">Cross Currency Swap</option>
-                                    <option value="1218">C-treasury</option>
-                                    <option value="1178">Current Account</option>
-                                    <option value="1000105">Current Account</option>
-                                    <option value="1307">Current Account</option>
-                                    <option value="1000112">Current Account</option>
-                                    <option value="1000155">Current Account</option>
-                                    <option value="1000246">Current Account</option>
-                                    <option value="1000294">Current Account</option>
-                                    <option value="1000072">Current Deposit Products</option>
-                                    <option value="1000227">Daily Deposit Scheme</option>
-                                    <option value="1000303">Debit Card</option>
-                                    <option value="1175">Defence Salary Account</option>
-                                    <option value="1000206">Deluxe Salary Account</option>
-                                    <option value="1000203">Deluxe Savings Account</option>
-                                    <option value="1000241">Demand Deposit</option>
-                                    <option value="1247">Demat Account</option>
-                                    <option value="1000258">Deposit Backed Loan</option>
-                                    <option value="1000224">Depositor's Pension Scheme</option>
-                                    <option value="1000312">Digital Account</option>
-                                    <option value="156">Direct Equity Investment</option>
-                                    <option value="1326">Drafts - Outward</option>
-                                    <option value="1327">Drafts Purchase/Collection</option>
-                                    <option value="1264">E Banking</option>
-                                    <option value="131">East West Travel Money</option>
-                                    <option value="134">Easy Investment Plan</option>
-                                    <option value="1000255">Eco Consumption Loan</option>
-                                    <option value="1000189">Education Loan Scheme</option>
-                                    <option value="1232">Education Loans</option>
-                                    <option value="1000066">eMyHassad</option>
-                                    <option value="1000263">Energy Efficient Housing Loan</option>
-                                    <option value="159">Engineering Insurance</option>
-                                    <option value="1246">Equity Funds</option>
-                                    <option value="1000031">Equity Release</option>
-                                    <option value="154">Equity Underwriting</option>
-                                    <option value="153">Export Bill Purchase</option>
-                                    <option value="1000002">Export letter of Credit</option>
-                                    <option value="1000188">Festival Advance Scheme</option>
-                                    <option value="1312">Fixed Deposit - Foreign Currencies</option>
-                                    <option value="1291">Fixed Deposit Account</option>
-                                    <option value="1000156">Fixed Deposit Account</option>
-                                    <option value="1311">Fixed Deposit- JOD</option>
-                                    <option value="1000307">Fixed Deposits</option>
-                                    <option value="1000216">Fixed Deposits Scheme</option>
-                                    <option value="155">Fixed Income Underwriting</option>
-                                    <option value="1000305">Flexi Long Term Deposits</option>
-                                    <option value="1000225">Flexi Recurring Deposit Scheme</option>
-                                    <option value="1234">Flexible Term Deposits</option>
-                                    <option value="1325">Foreign Currency Buy/Sell</option>
-                                    <option value="148">FOREX</option>
-                                    <option value="1263">FOREX</option>
-                                    <option value="1248">Forex Card</option>
-                                    <option value="1000244">Future Millionaire Savings/Children Savings</option>
-                                    <option value="1000207">General Salary Account</option>
-                                    <option value="1000204">General Savings Account</option>
-                                    <option value="1000205">General Small Account</option>
-                                    <option value="1000231">Global Debit Card</option>
-                                    <option value="1000164">Gold</option>
-                                    <option value="1000059">Gold & Classic Card</option>
-                                    <option value="1280">Gold Acct</option>
-                                    <option value="1000277">Gold Credit Card</option>
-                                    <option value="1000056">Gold Loan</option>
-                                    <option value="1000322">Gold VIsa</option>
-                                    <option value="1000270">GREEN BUSINESS LOAN FOR REDUCING AIR AND ENVIRONMENTAL
-                                        POLLUTION</option>
-                                    <option value="1000152">Green Loan</option>
-                                    <option value="1000311">Hassalati Account</option>
-                                    <option value="1323">Hatta Yedersou</option>
-                                    <option value="1243">Health Insurance</option>
-                                    <option value="1000173">Health Insurance Plan</option>
-                                    <option value="1000084">Home Financing</option>
-                                    <option value="141">Home Insurance</option>
-                                    <option value="138">Home Loan</option>
-                                    <option value="1275">Home loan</option>
-                                    <option value="1276">Home loan</option>
-                                    <option value="1277">Home loan</option>
-                                    <option value="1278">Home loan</option>
-                                    <option value="1000005">Home Loan Balance Transfer</option>
-                                    <option value="1000004">Home Loan Top Up</option>
-                                    <option value="1000252">Household Loan</option>
-                                    <option value="1000184">Housing Loan</option>
-                                    <option value="1000119">Housing Loan</option>
-                                    <option value="1000150">Housing Loan</option>
-                                    <option value="1000003">ICICI Pru iProtect Smart</option>
-                                    <option value="1285">IDBI Bank Cash Card</option>
-                                    <option value="1000139">Ijara</option>
-                                    <option value="1245">Ijara Funds</option>
-                                    <option value="1222">Import letter of Credit</option>
-                                    <option value="111">IndusStox 3-in-1 Account</option>
-                                    <option value="1000046">IndusStox 3-in-1 Account</option>
-                                    <option value="1266">Insurance</option>
-                                    <option value="1289">Interest Rate Swap</option>
-                                    <option value="1270">International Remittance</option>
-                                    <option value="1000028">International Transaction</option>
-                                    <option value="1000081">Investment</option>
-                                    <option value="1265">Investment Banking</option>
-                                    <option value="1000265">Investment Loan</option>
-                                    <option value="1320">Jana El Omr</option>
-                                    <option value="1000327">Jeans Card</option>
-                                    <option value="1310">Jeel Al Arabi Account</option>
-                                    <option value="1000186">JK Bank Personal Consumption Loan Technique</option>
-                                    <option value="1000226">Ladli Beti</option>
-                                    <option value="1319">Lamma Yekbarou</option>
-                                    <option value="1202">Letter Of Credit</option>
-                                    <option value="151">Letter of Credit</option>
-                                    <option value="1242">Life Insurance</option>
-                                    <option value="1000229">Life Insurance</option>
-                                    <option value="1000144">Loan against cash collateral</option>
-                                    <option value="1000201">Loan Against Gold Ornaments and Jewellery</option>
-                                    <option value="1271">Local Remittance</option>
-                                    <option value="1000130">Margin Trading Account</option>
-                                    <option value="1000127">Margin Trading Account</option>
-                                    <option value="158">Marine Insurance</option>
-                                    <option value="1000306">Maxplus Deposits</option>
-                                    <option value="1000057">Mazaya</option>
-                                    <option value="1000085">Mazzaya Social Housing Finance Scheme</option>
-                                    <option value="1000299">Medical Finance</option>
-                                    <option value="1000016">Medium & Heavy</option>
-                                    <option value="1000218">Mehandi Deposit Scheme</option>
-                                    <option value="1000233">Merchant Acquiring</option>
-                                    <option value="1000275">MIAT Credit Card</option>
-                                    <option value="1000140">Misk Savings Account</option>
-                                    <option value="162">Mobile Banking</option>
-                                    <option value="163">Mobile Banking</option>
-                                    <option value="1000193">Modular Kitchen Finance</option>
-                                    <option value="1000281">MONPAY Payment Card</option>
-                                    <option value="1000221">Monthly Yield Deposit Scheme</option>
-                                    <option value="1283">Mortgage Finance</option>
-                                    <option value="1236">Mortgage Finance</option>
-                                    <option value="1000260">Mortgage Loan</option>
-                                    <option value="1000146">Mortgage Loans</option>
-                                    <option value="1000034">Mudharabah</option>
-                                    <option value="1223">Mudharakah</option>
-                                    <option value="135">Mutual Fund</option>
-                                    <option value="1000175">My business insurance plan</option>
-                                    <option value="1000174">My Car Insurance</option>
-                                    <option value="1000147">My Family Loan</option>
-                                    <option value="1000171">My Financial Security</option>
-                                    <option value="1000170">My Health Program</option>
-                                    <option value="1000145">My Salary in Advance</option>
-                                    <option value="1000172">My Success Program</option>
-                                    <option value="1000068">MyHassad Certificates</option>
-                                    <option value="1000067">MyHassad Savings Account</option>
-                                    <option value="1000069">MyHassad Winners</option>
-                                    <option value="1229">NBK Term Deposit</option>
-                                    <option value="1000230">Non Life Insurance</option>
-                                    <option value="1293">Non Resident Jordanians Home Loan</option>
-                                    <option value="1000030">OFF-PLAN</option>
-                                    <option value="1000018">Passenger</option>
-                                    <option value="1237">PayPal Account</option>
-                                    <option value="1000213">Pension Account</option>
-                                    <option value="143">Personal Accident insurance</option>
-                                    <option value="1259">Personal Auto Finance</option>
-                                    <option value="1000078">Personal Finance</option>
-                                    <option value="1000082">Personal Finance</option>
-                                    <option value="1257">Personal Loan</option>
-                                    <option value="136">Personal Loan</option>
-                                    <option value="1000149">Personal Loan for Professionals and Self-employed
-                                        Individuals</option>
-                                    <option value="1173">Peso Time Deposits</option>
-                                    <option value="124">Phone Banking</option>
-                                    <option value="1000215">Pink Savings Scheme</option>
-                                    <option value="1000286">Platinum Card (UPI)</option>
-                                    <option value="1000283">Platinum Card (Visa)</option>
-                                    <option value="1000278">Platinum Credit Card</option>
-                                    <option value="1000008">Platinum Debit Card</option>
-                                    <option value="1000323">Platinum Visa</option>
-                                    <option value="1000214">Premium Savings Account</option>
-                                    <option value="1000234">Prepaid Cards</option>
-                                    <option value="1000243">Prepaid Interest Deposit</option>
-                                    <option value="1000261">Private House Mortgage</option>
-                                    <option value="1176">Product</option>
-                                    <option value="144">Project Finanace Loan</option>
-                                    <option value="1181">Project Loan</option>
-                                    <option value="1000271">Project Loans</option>
-                                    <option value="157">Property Insurance</option>
-                                    <option value="1322">Rahet El-Bal</option>
-                                    <option value="1000222">Recurring Deposit Scheme</option>
-                                    <option value="1000033">REDF and Ministry of Housing</option>
-                                    <option value="1000029">REDF and Ministry of Housing</option>
-                                    <option value="1000242">Regular Term Deposit</option>
-                                    <option value="1000240">Regular Term Deposit</option>
-                                    <option value="129">Renminbi Savings Account</option>
-                                    <option value="1000310">Rent Finance</option>
-                                    <option value="1000273">S.W.I.F.T.</option>
-                                    <option value="1329">Safe Deposit Boxes</option>
-                                    <option value="1000194">Sahafat Finance Scheme</option>
-                                    <option value="1000161">Salary Account</option>
-                                    <option value="125">Salary Account</option>
-                                    <option value="1000071">Salary Deposits</option>
-                                    <option value="1000253">Salary Loan</option>
-                                    <option value="1274">Sarie</option>
-                                    <option value="1000045">Saving Account</option>
-                                    <option value="1308">Saving Account</option>
-                                    <option value="1000160">Saving Account</option>
-                                    <option value="1000210">Saving Account - Government</option>
-                                    <option value="112">Savings Account</option>
-                                    <option value="1000295">Savings Account</option>
-                                    <option value="1000141">Sharia</option>
-                                    <option value="1000032">SHL Ijarah</option>
-                                    <option value="1284">Short Term Loan</option>
-                                    <option value="1000326">SIB DIgital Card</option>
-                                    <option value="1000163">Silver</option>
-                                    <option value="1000199">Skill Loan Scheme</option>
-                                    <option value="1000017">Small & Light</option>
-                                    <option value="145">Small Business Loan</option>
-                                    <option value="1000220">Smart Saver Term Deposit Scheme</option>
-                                    <option value="1000191">Smartphone Finance</option>
-                                    <option value="1000301">Smiles Titanium</option>
-                                    <option value="1000314">Smiles World</option>
-                                    <option value="1000202">Solar Equipment Finance</option>
-                                    <option value="1000228">Special Bachat Deposit Scheme</option>
-                                    <option value="1000010">Srilanka Debit Cards</option>
-                                    <option value="1000245">Standing Order</option>
-                                    <option value="1000208">Student Savings Account</option>
-                                    <option value="1272">Sukuk</option>
-                                    <option value="1000026">SUV</option>
-                                    <option value="1000177">SWIFT Transfers</option>
-                                    <option value="1000317">Takaful</option>
-                                    <option value="1000316">Takeover Liability</option>
-                                    <option value="1000219">Tax Saver Term Deposit Scheme</option>
-                                    <option value="1000318">Tayseer (salary advance)</option>
-                                    <option value="1000313">Tayseer (salary advance)</option>
-                                    <option value="1000287">Temuulel Card</option>
-                                    <option value="1000288">Temuulel Sub Card</option>
-                                    <option value="1183">Term Deposit</option>
-                                    <option value="1000073">Term Deposit Product</option>
-                                    <option value="1286">Term Loan</option>
-                                    <option value="1000190">Term Loan For B.Ed./M.Ed. Courses</option>
-                                    <option value="146">Term Loans</option>
-                                    <option value="1000043">Test 1</option>
-                                    <option value="1215">Toyota Camry</option>
-                                    <option value="1221">Toyota Hilux</option>
-                                    <option value="152">Trade Settlement</option>
-                                    <option value="1324">Transfer (Outward & Inward)</option>
-                                    <option value="1000298">Travel Finance</option>
-                                    <option value="142">Travel Insurance</option>
-                                    <option value="1244">Travel Insurance</option>
-                                    <option value="1225">Trust Account</option>
-                                    <option value="1000197">Two Wheeler Finance</option>
-                                    <option value="1000285">UnionPay Classic Card</option>
-                                    <option value="133">Unit Investment Trust Fund</option>
-                                    <option value="1000074">USD Step Up Deposit Product</option>
-                                    <option value="1000019">Used</option>
-                                    <option value="137">Vehicle Purchase Loan</option>
-                                    <option value="1273">VIP Services</option>
-                                    <option value="1000009">Visa Card</option>
-                                    <option value="1000280">Visa FIFA World Cup Qatar 2022 themed Official Card</option>
-                                    <option value="1000168">Visa Infinite</option>
-                                    <option value="1000113">Visa Infinite Card</option>
-                                    <option value="1000115">Visa Infinite Debit Card</option>
-                                    <option value="1000167">Visa Platinum</option>
-                                    <option value="1317">Visa Platinum Credit Card</option>
-                                    <option value="1000114">Visa Signature Cobranded Card with Qatar Airways</option>
-                                    <option value="1000116">Visa Signature Debit Card</option>
-                                    <option value="1254">Wadiah</option>
-                                    <option value="1000293">Watani Account</option>
-                                    <option value="1226">Watani Express Account</option>
-                                    <option value="1231">Watani Super Account</option>
-                                    <option value="147">Working Capital Loan</option>
-                                    <option value="1000264">Working Capital Loan</option>
-                                    <option value="1000165">World</option>
-                                    <option value="1000166">World Elite</option>
-                                    <option value="1249">World Master Card</option>
-                                    <option value="1268">XY 100</option>
-                                    <option value="1000011">xyz</option>
-                                    <option value="1000153">Zero Interest Loan</option>
-                                    <option value="1000309">Zoud Package</option>
-                                    <option value="1000267">МЕРЧАНТЫН ОНЛАЙН ЗЭЭЛ</option>
-                                    <option value="1000269">ХҮНС, ХӨДӨӨ АЖ АХУЙН ҮЙЛДВЭРЛЭЛИЙГ ДЭМЖИХ ХӨРӨНГӨ ОРУУЛАЛТЫН
-                                        ЗЭЭЛ</option>
-                                    <option value="1000268">ХҮНС, ХӨДӨӨ АЖ АХУЙН ҮЙЛДВЭРЛЭЛИЙГ ДЭМЖИХ ЭРГЭЛТИЙН
-                                        ХӨРӨНГИЙН ЗЭЭЛ</option>
-                                    <option value="1000266">ЭМЭГТЭЙ БИЗНЕС ЭРХЛЭГЧДИЙГ ДЭМЖИХ ЗЭЭЛ</option>
-                                </select>
-                                <input id="ProductName" name="ProductName" type="hidden" style="width:100px"
-                                    value="6% Mortgage" />
-                            </td>
-                            <td> Status Code </td>
-                            <td>
-                                <select id="StatusCode" name="StatusCode" style="width:100px" hidden>
-                                    <option selected value="1">New</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td hidden> Priority :&nbsp; </td>
-                            <td>
-                                <select hidden id="CasePriority" name="CasePriority" style="width:100px">
-                                    <option value="0">None</option>
-                                    <option value="1">ASAP</option>
-                                    <option selected value="2">High</option>
-                                    <option value="3">Normal</option>
-                                    <option value="4">Low</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td hidden> CaseOrigin :&nbsp; </td>
-                            <td>
-                                <select id="CaseOrigin" name="CaseOrigin" style="width:100px" hidden>
-                                    <option selected value="2">Web Form</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td hidden> Layout </td>
-                            <td>
-                                <select id="Layout" name="Layout" style="width:100px" hidden>
-                                    <option selected value="102939">Service Requests SIB</option>
-                                </select>
-                            </td>
-                           
-                                <td> Casecategory :&nbsp; </></td>
-                                <td>
-                            <select name="CASE_CATEGORY" class="selectbox" data-autoid="CASE_CATEGORY_ctrl"
-                                data-gtm-form-interact-field-id="0">
-                                <option value="-1">--Select Value--</option>
-                                <option value="437">Sharia Inquiry</option>
-                                <option value="438">General Inquiry</option>
-                                <option value="7">Request</option>
-                                <option value="8">Complaint</option>
-                                <option value="117">Feedback</option>
-                            </select>
+               <td width="100%" height="100%" valign="top">
+                  <table cellSpacing="0" cellPadding="0" width="100%" border="0">
+                     <colgroup>
+                        <col align="right" width="20%" />
+                        <col width="30%" />
+                        <col align="right" width="20%" />
+                        <col width="30%" />
+                     </colgroup>
+                     <tr>
+                        <td>First Name</td>
+                        <td>
+                           <select id="Salutation" name="Salutation" style="width:100px">
+                              <option value= "0"></option>
+                              <option value= "100001">Co.</option>
+                              <option value= "100000">LLP</option>
+                              <option value= "1">Mr.</option>
+                              <option value= "2">Ms.</option>
+                              <option value= "3">Dr.</option>
+                              <option value= "4">Mrs.</option>
+                           </select>
+                           <input type="text" id="FName" name="FName">
                         </td>
-                            <td>Nature of Call :&nbsp;</td>
-                            <td> <input type="text" id="cust_301" name="cust_301" value="" style="width:100px" /> </td>
-                        </tr>
-                        <tr height="10px">
-                            <td>&nbsp;</td>
-                        </tr>
-                        <tr>
-                            <td colspan="4" align="center"> <input type="submit" name="submit" id="submit"
-                                    value="Submit" onclick="return IsValidForm();"> </td>
-                        </tr>
-                    </table>
-                </td>
+                        <td> LastName :&nbsp; </td>
+                        <td><input type="text" id="LName" name="LName" style="width:100px" /></td>
+                     </tr>
+                     <tr>
+                        <td> Company :&nbsp; </td>
+                        <td><input type="text" id="Company" name="Company" style="width:100px" /></td>
+                        <td>Product</td>
+                        <td>
+                           <select id="Product" name="Product" onchange="UpdateProductName();" style="width:100px">
+                              <option value= "1000262">6% Mortgage</option>
+                              <option value= "1321">Aaelaty Bi Aman</option>
+                              <option value= "1000080">Account</option>
+                              <option value= "1000297">Additional Personal Finance</option>
+                              <option value= "1000187">Agri Loan</option>
+                              <option value= "1230">AL AMIL Account</option>
+                              <option value= "1228">AL Jawhara</option>
+                              <option value= "1309">Arabi Extra Program</option>
+                              <option value= "130">ATM Debit Cards</option>
+                              <option value= "1000083">Auto Financing</option>
+                              <option value= "140">Auto Insurance</option>
+                              <option value= "1000118">Auto Loan</option>
+                              <option value= "1000259">Automobile Purchase Loan</option>
+                              <option value= "1000104">Basic Saving Account</option>
+                              <option value= "1000212">Basic Saving Deposit</option>
+                              <option value= "1000209">Basic Saving Deposit</option>
+                              <option value= "127">Basic Savings Account</option>
+                              <option value= "132">Bills Pay Facility</option>
+                              <option value= "149">Bonds</option>
+                              <option value= "1000192">Budshah School Education Finance</option>
+                              <option value= "1000121">Business Finance</option>
+                              <option value= "1177">Business Loan</option>
+                              <option value= "1000122">Business Vehicle Loan</option>
+                              <option value= "1000157">Call Deposit Account</option>
+                              <option value= "1000196">Car Loan for Used Cars</option>
+                              <option value= "1000195">Car Loan Scheme</option>
+                              <option value= "1000151">Car Loans</option>
+                              <option value= "1000217">Cash Certificate Scheme</option>
+                              <option value= "1000055">Cash Collection</option>
+                              <option value= "1000200">Cash Credit Scheme (Salaried Employees)</option>
+                              <option value= "1000126">Cash trading account</option>
+                              <option value= "1000129">Cash Trading Account</option>
+                              <option value= "1000315">Cashback Card</option>
+                              <option value= "1224">c-cash management</option>
+                              <option value= "1174">Cheque Max</option>
+                              <option value= "1000223">Child-care Deposit Scheme</option>
+                              <option value= "1000257">CHIP БАГЦ ТӨСЛИЙН ЗЭЭЛ</option>
+                              <option value= "1220">c-investment</option>
+                              <option value= "1217">C-Investment</option>
+                              <option value= "1000282">Classic Card</option>
+                              <option value= "1000276">Classic Credit Card</option>
+                              <option value= "1000321">Classic Visa</option>
+                              <option value= "1000198">Coaching Fee Loan Scheme</option>
+                              <option value= "1000185">Consumer Loan</option>
+                              <option value= "1000058">Consumer Loan</option>
+                              <option value= "1000256">Consumption Green Loan</option>
+                              <option value= "1000254">Consumption Purchase Loan</option>
+                              <option value= "128">Cool Savers Kiddie Account</option>
+                              <option value= "1000328">COOP Prepaid Card</option>
+                              <option value= "1000020">Corporate</option>
+                              <option value= "1260">Corporate Auto Finance</option>
+                              <option value= "1262">Corporate Auto Lease</option>
+                              <option value= "1180">Corporate Loan</option>
+                              <option value= "1287">Corporate Payroll Account</option>
+                              <option value= "126">Corporate Salary Account</option>
+                              <option value= "1290">Coupon Bearing Bond</option>
+                              <option value= "1000232">Credit Card</option>
+                              <option value= "1000079">Credit Cards</option>
+                              <option value= "1288">Cross Currency Swap</option>
+                              <option value= "1218">C-treasury</option>
+                              <option value= "1178">Current Account</option>
+                              <option value= "1000105">Current Account</option>
+                              <option value= "1307">Current Account</option>
+                              <option value= "1000112">Current Account</option>
+                              <option value= "1000155">Current Account</option>
+                              <option value= "1000246">Current Account</option>
+                              <option value= "1000294">Current Account</option>
+                              <option value= "1000072">Current Deposit Products</option>
+                              <option value= "1000227">Daily Deposit Scheme</option>
+                              <option value= "1000303">Debit Card</option>
+                              <option value= "1175">Defence Salary Account</option>
+                              <option value= "1000206">Deluxe Salary Account</option>
+                              <option value= "1000203">Deluxe Savings Account</option>
+                              <option value= "1000241">Demand Deposit</option>
+                              <option value= "1247">Demat Account</option>
+                              <option value= "1000258">Deposit Backed Loan</option>
+                              <option value= "1000224">Depositor's Pension Scheme</option>
+                              <option value= "1000312">Digital Account</option>
+                              <option value= "156">Direct Equity Investment</option>
+                              <option value= "1326">Drafts - Outward</option>
+                              <option value= "1327">Drafts Purchase/Collection</option>
+                              <option value= "1264">E Banking</option>
+                              <option value= "131">East West Travel Money</option>
+                              <option value= "134">Easy Investment Plan</option>
+                              <option value= "1000255">Eco Consumption Loan</option>
+                              <option value= "1000189">Education Loan Scheme</option>
+                              <option value= "1232">Education Loans</option>
+                              <option value= "1000066">eMyHassad</option>
+                              <option value= "1000263">Energy Efficient Housing Loan</option>
+                              <option value= "159">Engineering Insurance</option>
+                              <option value= "1246">Equity Funds</option>
+                              <option value= "1000031">Equity Release</option>
+                              <option value= "154">Equity Underwriting</option>
+                              <option value= "153">Export Bill Purchase</option>
+                              <option value= "1000002">Export letter of Credit</option>
+                              <option value= "1000188">Festival Advance Scheme</option>
+                              <option value= "1312">Fixed Deposit - Foreign Currencies</option>
+                              <option value= "1291">Fixed Deposit Account</option>
+                              <option value= "1000156">Fixed Deposit Account</option>
+                              <option value= "1311">Fixed Deposit- JOD</option>
+                              <option value= "1000307">Fixed Deposits</option>
+                              <option value= "1000216">Fixed Deposits Scheme</option>
+                              <option value= "155">Fixed Income Underwriting</option>
+                              <option value= "1000305">Flexi Long Term Deposits</option>
+                              <option value= "1000225">Flexi Recurring Deposit Scheme</option>
+                              <option value= "1234">Flexible Term Deposits</option>
+                              <option value= "1325">Foreign Currency Buy/Sell</option>
+                              <option value= "148">FOREX</option>
+                              <option value= "1263">FOREX</option>
+                              <option value= "1248">Forex Card</option>
+                              <option value= "1000244">Future Millionaire Savings/Children Savings</option>
+                              <option value= "1000207">General Salary Account</option>
+                              <option value= "1000204">General Savings Account</option>
+                              <option value= "1000205">General Small Account</option>
+                              <option value= "1000231">Global Debit Card</option>
+                              <option value= "1000164">Gold</option>
+                              <option value= "1000059">Gold &amp; Classic Card</option>
+                              <option value= "1280">Gold Acct</option>
+                              <option value= "1000277">Gold Credit Card</option>
+                              <option value= "1000056">Gold Loan</option>
+                              <option value= "1000322">Gold VIsa</option>
+                              <option value= "1000270">GREEN BUSINESS LOAN FOR REDUCING AIR AND ENVIRONMENTAL POLLUTION</option>
+                              <option value= "1000152">Green Loan</option>
+                              <option value= "1000311">Hassalati Account</option>
+                              <option value= "1323">Hatta Yedersou</option>
+                              <option value= "1243">Health Insurance</option>
+                              <option value= "1000173">Health Insurance Plan</option>
+                              <option value= "1000084">Home Financing</option>
+                              <option value= "141">Home Insurance</option>
+                              <option value= "138">Home Loan</option>
+                              <option value= "1275">Home loan</option>
+                              <option value= "1276">Home loan</option>
+                              <option value= "1277">Home loan</option>
+                              <option value= "1278">Home loan</option>
+                              <option value= "1000005">Home Loan Balance Transfer</option>
+                              <option value= "1000004">Home Loan Top Up</option>
+                              <option value= "1000252">Household Loan</option>
+                              <option value= "1000184">Housing Loan</option>
+                              <option value= "1000119">Housing Loan</option>
+                              <option value= "1000150">Housing Loan</option>
+                              <option value= "1000003">ICICI Pru iProtect Smart</option>
+                              <option value= "1285">IDBI Bank Cash Card</option>
+                              <option value= "1000139">Ijara</option>
+                              <option value= "1245">Ijara Funds</option>
+                              <option value= "1222">Import letter of Credit</option>
+                              <option value= "111">IndusStox 3-in-1 Account</option>
+                              <option value= "1000046">IndusStox 3-in-1 Account</option>
+                              <option value= "1266">Insurance</option>
+                              <option value= "1289">Interest Rate Swap</option>
+                              <option value= "1270">International Remittance</option>
+                              <option value= "1000028">International Transaction</option>
+                              <option value= "1000081">Investment</option>
+                              <option value= "1265">Investment Banking</option>
+                              <option value= "1000265">Investment Loan</option>
+                              <option value= "1320">Jana El Omr</option>
+                              <option value= "1000327">Jeans Card</option>
+                              <option value= "1310">Jeel Al Arabi Account</option>
+                              <option value= "1000186">JK Bank Personal Consumption Loan Technique</option>
+                              <option value= "1000226">Ladli Beti</option>
+                              <option value= "1319">Lamma Yekbarou</option>
+                              <option value= "1202">Letter Of Credit</option>
+                              <option value= "151">Letter of Credit</option>
+                              <option value= "1242">Life Insurance</option>
+                              <option value= "1000229">Life Insurance</option>
+                              <option value= "1000144">Loan against cash collateral</option>
+                              <option value= "1000201">Loan Against Gold Ornaments and Jewellery</option>
+                              <option value= "1271">Local Remittance</option>
+                              <option value= "1000130">Margin Trading Account</option>
+                              <option value= "1000127">Margin Trading Account</option>
+                              <option value= "158">Marine Insurance</option>
+                              <option value= "1000306">Maxplus Deposits</option>
+                              <option value= "1000057">Mazaya</option>
+                              <option value= "1000085">Mazzaya Social Housing Finance Scheme</option>
+                              <option value= "1000299">Medical Finance</option>
+                              <option value= "1000016">Medium &amp; Heavy</option>
+                              <option value= "1000218">Mehandi Deposit Scheme</option>
+                              <option value= "1000233">Merchant Acquiring</option>
+                              <option value= "1000275">MIAT Credit Card</option>
+                              <option value= "1000140">Misk Savings Account</option>
+                              <option value= "162">Mobile Banking</option>
+                              <option value= "163">Mobile Banking</option>
+                              <option value= "1000193">Modular Kitchen Finance</option>
+                              <option value= "1000281">MONPAY Payment Card</option>
+                              <option value= "1000221">Monthly Yield Deposit Scheme</option>
+                              <option value= "1283">Mortgage Finance</option>
+                              <option value= "1236">Mortgage Finance</option>
+                              <option value= "1000260">Mortgage Loan</option>
+                              <option value= "1000146">Mortgage Loans</option>
+                              <option value= "1000034">Mudharabah</option>
+                              <option value= "1223">Mudharakah</option>
+                              <option value= "135">Mutual Fund</option>
+                              <option value= "1000175">My business insurance plan</option>
+                              <option value= "1000174">My Car Insurance</option>
+                              <option value= "1000147">My Family Loan</option>
+                              <option value= "1000171">My Financial Security</option>
+                              <option value= "1000170">My Health Program</option>
+                              <option value= "1000145">My Salary in Advance</option>
+                              <option value= "1000172">My Success Program</option>
+                              <option value= "1000068">MyHassad Certificates</option>
+                              <option value= "1000067">MyHassad Savings Account</option>
+                              <option value= "1000069">MyHassad Winners</option>
+                              <option value= "1229">NBK Term Deposit</option>
+                              <option value= "1000230">Non Life Insurance</option>
+                              <option value= "1293">Non Resident Jordanians Home Loan</option>
+                              <option value= "1000030">OFF-PLAN</option>
+                              <option value= "1000018">Passenger</option>
+                              <option value= "1237">PayPal Account</option>
+                              <option value= "1000213">Pension Account</option>
+                              <option value= "143">Personal Accident insurance</option>
+                              <option value= "1259">Personal Auto Finance</option>
+                              <option value= "1000078">Personal Finance</option>
+                              <option value= "1000082">Personal Finance</option>
+                              <option value= "1000329">Personal Finance</option>
+                              <option value= "1257">Personal Loan</option>
+                              <option value= "136">Personal Loan</option>
+                              <option value= "1000149">Personal Loan for Professionals and Self-employed Individuals</option>
+                              <option value= "1173">Peso Time Deposits</option>
+                              <option value= "124">Phone Banking</option>
+                              <option value= "1000215">Pink Savings Scheme</option>
+                              <option value= "1000286">Platinum Card (UPI)</option>
+                              <option value= "1000283">Platinum Card (Visa)</option>
+                              <option value= "1000278">Platinum Credit Card</option>
+                              <option value= "1000008">Platinum Debit Card</option>
+                              <option value= "1000323">Platinum Visa</option>
+                              <option value= "1000214">Premium Savings Account</option>
+                              <option value= "1000234">Prepaid Cards</option>
+                              <option value= "1000243">Prepaid Interest Deposit</option>
+                              <option value= "1000261">Private House Mortgage</option>
+                              <option value= "1176">Product</option>
+                              <option value= "144">Project Finanace Loan</option>
+                              <option value= "1181">Project Loan</option>
+                              <option value= "1000271">Project Loans</option>
+                              <option value= "157">Property Insurance</option>
+                              <option value= "1322">Rahet El-Bal</option>
+                              <option value= "1000222">Recurring Deposit Scheme</option>
+                              <option value= "1000033">REDF and Ministry of Housing</option>
+                              <option value= "1000029">REDF and Ministry of Housing</option>
+                              <option value= "1000242">Regular Term Deposit</option>
+                              <option value= "1000240">Regular Term Deposit</option>
+                              <option value= "129">Renminbi Savings Account</option>
+                              <option value= "1000310">Rent Finance</option>
+                              <option value= "1000273">S.W.I.F.T.</option>
+                              <option value= "1329">Safe Deposit Boxes</option>
+                              <option value= "1000194">Sahafat Finance Scheme</option>
+                              <option value= "1000161">Salary Account</option>
+                              <option value= "125">Salary Account</option>
+                              <option value= "1000071">Salary Deposits</option>
+                              <option value= "1000253">Salary Loan</option>
+                              <option value= "1274">Sarie</option>
+                              <option value= "1000045">Saving Account</option>
+                              <option value= "1308">Saving Account</option>
+                              <option value= "1000160">Saving Account</option>
+                              <option value= "1000210">Saving Account - Government</option>
+                              <option value= "112">Savings Account</option>
+                              <option value= "1000295">Savings Account</option>
+                              <option value= "1000141">Sharia</option>
+                              <option value= "1000032">SHL Ijarah</option>
+                              <option value= "1284">Short Term Loan</option>
+                              <option value= "1000326">SIB DIgital Card</option>
+                              <option value= "1000163">Silver</option>
+                              <option value= "1000199">Skill Loan Scheme</option>
+                              <option value= "1000017">Small &amp; Light</option>
+                              <option value= "145">Small Business Loan</option>
+                              <option value= "1000220">Smart Saver Term Deposit Scheme</option>
+                              <option value= "1000191">Smartphone Finance</option>
+                              <option value= "1000301">Smiles Titanium</option>
+                              <option value= "1000314">Smiles World</option>
+                              <option value= "1000202">Solar Equipment Finance</option>
+                              <option value= "1000228">Special Bachat Deposit Scheme</option>
+                              <option value= "1000010">Srilanka Debit Cards</option>
+                              <option value= "1000245">Standing Order</option>
+                              <option value= "1000208">Student Savings Account</option>
+                              <option value= "1272">Sukuk</option>
+                              <option value= "1000026">SUV</option>
+                              <option value= "1000177">SWIFT Transfers</option>
+                              <option value= "1000317">Takaful</option>
+                              <option value= "1000316">Takeover Liability</option>
+                              <option value= "1000219">Tax Saver Term Deposit Scheme</option>
+                              <option value= "1000318">Tayseer (salary advance)</option>
+                              <option value= "1000313">Tayseer (salary advance)</option>
+                              <option value= "1000287">Temuulel Card</option>
+                              <option value= "1000288">Temuulel Sub Card</option>
+                              <option value= "1183">Term Deposit</option>
+                              <option value= "1000073">Term Deposit Product</option>
+                              <option value= "1286">Term Loan</option>
+                              <option value= "1000190">Term Loan For B.Ed./M.Ed. Courses</option>
+                              <option value= "146">Term Loans</option>
+                              <option value= "1000043">Test 1</option>
+                              <option value= "1215">Toyota Camry</option>
+                              <option value= "1221">Toyota Hilux</option>
+                              <option value= "152">Trade Settlement</option>
+                              <option value= "1324">Transfer (Outward &amp; Inward)</option>
+                              <option value= "1000298">Travel Finance</option>
+                              <option value= "142">Travel Insurance</option>
+                              <option value= "1244">Travel Insurance</option>
+                              <option value= "1225">Trust Account</option>
+                              <option value= "1000197">Two Wheeler Finance</option>
+                              <option value= "1000285">UnionPay Classic Card</option>
+                              <option value= "133">Unit Investment Trust Fund</option>
+                              <option value= "1000074">USD Step Up Deposit Product</option>
+                              <option value= "1000019">Used</option>
+                              <option value= "137">Vehicle Purchase Loan</option>
+                              <option value= "1273">VIP Services</option>
+                              <option value= "1000009">Visa Card</option>
+                              <option value= "1000280">Visa FIFA World Cup Qatar 2022 themed Official Card</option>
+                              <option value= "1000168">Visa Infinite</option>
+                              <option value= "1000113">Visa Infinite Card</option>
+                              <option value= "1000115">Visa Infinite Debit Card</option>
+                              <option value= "1000167">Visa Platinum</option>
+                              <option value= "1317">Visa Platinum Credit Card</option>
+                              <option value= "1000114">Visa Signature Cobranded Card with Qatar Airways</option>
+                              <option value= "1000116">Visa Signature Debit Card</option>
+                              <option value= "1254">Wadiah</option>
+                              <option value= "1000293">Watani Account</option>
+                              <option value= "1226">Watani Express Account</option>
+                              <option value= "1231">Watani Super Account</option>
+                              <option value= "147">Working Capital Loan</option>
+                              <option value= "1000264">Working Capital Loan</option>
+                              <option value= "1000165">World</option>
+                              <option value= "1000166">World Elite</option>
+                              <option value= "1249">World Master Card</option>
+                              <option value= "1268">XY 100</option>
+                              <option value= "1000011">xyz</option>
+                              <option value= "1000153">Zero Interest Loan</option>
+                              <option value= "1000309">Zoud Package</option>
+                              <option value= "1000267">МЕРЧАНТЫН ОНЛАЙН ЗЭЭЛ</option>
+                              <option value= "1000269">ХҮНС, ХӨДӨӨ АЖ АХУЙН ҮЙЛДВЭРЛЭЛИЙГ ДЭМЖИХ ХӨРӨНГӨ ОРУУЛАЛТЫН ЗЭЭЛ</option>
+                              <option value= "1000268">ХҮНС, ХӨДӨӨ АЖ АХУЙН ҮЙЛДВЭРЛЭЛИЙГ ДЭМЖИХ ЭРГЭЛТИЙН ХӨРӨНГИЙН ЗЭЭЛ</option>
+                              <option value= "1000266">ЭМЭГТЭЙ БИЗНЕС ЭРХЛЭГЧДИЙГ ДЭМЖИХ ЗЭЭЛ</option>
+                           </select>
+                           <input id="ProductName" name="ProductName" type="hidden" style="width:100px" value="6% Mortgage" /> 
+                        </td>
+                     </tr>
+                     <tr>
+                        <td> Status Code </td>
+                        <td>
+                           <select id="StatusCode" name="StatusCode" style="width:100px">
+                              <option value= "100003">New</option>
+                              <option value= "100002">Qualify</option>
+                              <option value= "100004">Develop</option>
+                              <option value= "100005">Documented</option>
+                              <option value= "100006">Approve</option>
+                              <option value= "100007">In Process</option>
+                              <option value= "100023">Lead Qualified</option>
+                              <option value= "100025">Data Entry</option>
+                              <option value= "100026">Credit Verification</option>
+                              <option value= "100027">BRE Check</option>
+                              <option value= "100028">Approved in Principle</option>
+                              <option value= "100029">Rejected</option>
+                              <option value= "100030">Docs Collected</option>
+                              <option value= "100031">Docs Submitted</option>
+                              <option value= "101147">Document Uploaded</option>
+                              <option value= "100032">Send to LOS</option>
+                              <option value= "100033">Loan Sanctioned</option>
+                              <option value= "100037">LAN Generated</option>
+                              <option value= "100038">Account Opened</option>
+                              <option value= "100039">Finance Disbursed</option>
+                              <option value= "100041">Docs Verified</option>
+                              <option value= "100042">CAM Generated</option>
+                              <option value= "100046">Assign to Sales</option>
+                              <option value= "100051">Qualified</option>
+                              <option value= "101075">Need More Info</option>
+                              <option value= "101083">Info Updated</option>
+                              <option value= "101085">Information Updated</option>
+                              <option value= "101088">Application Approved</option>
+                              <option value= "101089">Application Rejected</option>
+                              <option value= "101148">Notify to Customer</option>
+                              <option value= "101090">Documents Required</option>
+                              <option value= "101091">Send to Card Application System</option>
+                              <option value= "101092">Card Dispatched</option>
+                              <option value= "101096">Sent for Approval</option>
+                              <option value= "101110">Contacted</option>
+                              <option value= "101111">Not Contacted</option>
+                              <option value= "101113">Fix Meeting</option>
+                              <option value= "101112">Follow Up</option>
+                              <option value= "101132">Term Sheet Shared</option>
+                              <option value= "101134">Documentation in Process</option>
+                              <option value= "101135">Co ordination with Compliance</option>
+                              <option value= "101139">CWRG</option>
+                              <option value= "101142">Compliance in Progress</option>
+                              <option value= "101149">Detail Data Entry Done</option>
+                              <option value= "101150">Key Information Updated</option>
+                              <option value= "101159">Sent for docs</option>
+                              <option value= "101166">Referred</option>
+                              <option value= "101167">Closed Unreachable</option>
+                              <option value= "101168">Open</option>
+                              <option value= "101169">Contact Later</option>
+                              <option value= "101170">Closed Not Interested</option>
+                              <option value= "101171">Closed Not Eligible</option>
+                              <option value= "101172">Application in Progress</option>
+                              <option value= "101173">Converted</option>
+                              <option value= "101174">Assign to RM</option>
+                              <option value= "101176">Sent to LOS</option>
+                              <option value= "101177">WinBack</option>
+                              <option value= "101178">Application Submitted</option>
+                              <option value= "101179">Document Collection</option>
+                              <option value= "101180">Sent to Processor</option>
+                              <option value= "101181">On Hold</option>
+                              <option value= "101188">Underwriting</option>
+                              <option value= "101189">Conditional Approval - Prior to Doc</option>
+                              <option value= "101190">Conditional Approval - Prior to Fund</option>
+                              <option value= "101191">Clear to Close</option>
+                              <option value= "101192">Closing Disclosure</option>
+                              <option value= "101194">Active</option>
+                              <option value= "101195">Loan Account Number Generation</option>
+                              <option value= "100022">Fresh</option>
+                              <option value= "101129">Identified</option>
+                              <option value= "101140">Opportunity Idetified</option>
+                           </select>
+                        </td>
+                        <td> Layout </td>
+                        <td>
+                           <select id="Layout" name="Layout" style="width:100px">
+                              <option value= "102903">New Sales Process</option>
+                              <option value= "102796">Individual Asset</option>
+                              <option value= "102800">Account Opening Process</option>
+                              <option value= "102525">Cards</option>
+                              <option value= "102664">Assets</option>
+                              <option value= "102413">Credit Card</option>
+                              <option value= "102603">Bank Account Opening</option>
+                              <option value= "102888">Credit Card.</option>
+                              <option value= "102880">BDI Lead Management</option>
+                              <option value= "102877">Lead Management Process</option>
+                              <option value= "102878">Lead Lending Process</option>
+                              <option value= "102859">Agent Onboarding</option>
+                              <option value= "102885">Individual Asset (Africa)</option>
+                              <option value= "102862">Referral Management</option>
+                              <option value= "102858">Lead Capture</option>
+                              <option value= "102544">Account Opening</option>
+                              <option value= "102851">Joint Account Opening</option>
+                              <option value= "102850">Corporate Asset</option>
+                              <option value= "102829">Bulk Account Opening</option>
+                              <option value= "102815">Financing (Islamic Lead)</option>
+                              <option value= "102865">Lead Managem</option>
+                              <option value= "102835">CASA</option>
+                              <option value= "102686">Corporate Onboarding</option>
+                              <option value= "102606">Vehicle Financing</option>
+                              <option value= "102563">Digital Loan</option>
+                              <option value= "102588">Lead and Referral </option>
+                              <option value= "102787">SIB Gold Loan (FH)</option>
+                              <option value= "102730">Home Loan Process</option>
+                              <option value= "102713">Working Capital Loan</option>
+                              <option value= "102688">Multi Product</option>
+                              <option value= "102761">Account Opening Australia</option>
+                              <option value= "102762">Account Opening UK</option>
+                              <option value= "102784">Old_Account Opening</option>
+                              <option value= "102607">Corporate Financing</option>
+                              <option value= "1002">Loan Flow</option>
+                              <option value= "102791">Dummy</option>
+                              <option value= "102439">Credit Card EWB</option>
+                              <option value= "102792">Dummy DND</option>
+                              <option value= "102450">Investment Banking</option>
+                              <option value= "102531">Lead Capture </option>
+                              <option value= "102545">Civil ID Simulation</option>
+                              <option value= "102549">Fetch Applicant Details</option>
+                              <option value= "102564">Digital Screenflow Layouts</option>
+                              <option value= "102570">New Customer Enrollment</option>
+                              <option value= "102569">Screenflow</option>
+                              <option value= "102580">OTP_Customer</option>
+                              <option value= "102589">Online Credit Card</option>
+                              <option value= "102592">Lead Referral</option>
+                              <option value= "102683">Cards Old</option>
+                              <option value= "102692">Staging layout for QLMP</option>
+                              <option value= "102694">Working Capital Loan OLd</option>
+                              <option value= "102700">Need Analysis</option>
+                              <option value= "102702">Plan Details</option>
+                              <option value= "102703">Life Insurance Lead Creation</option>
+                              <option value= "102729">GIB</option>
+                              <option value= "102734">Wealth Customer</option>
+                              <option value= "102737">Individual Lead</option>
+                              <option value= "102739">Balance Transfer </option>
+                              <option value= "102748">CIF </option>
+                              <option value= "102751">Saudi Home Loan NULL</option>
+                              <option value= "102752">Loan Financing</option>
+                              <option value= "102769">Referral Leads V1.0</option>
+                              <option value= "102783">GIB_New</option>
+                              <option value= "102826">Member Onboarding</option>
+                              <option value= "102853">Signatory Mandate</option>
+                              <option value= "102873">Referral Leads Screenflow</option>
+                              <option value= "102875">Referral Leads</option>
+                              <option value= "102881">Mutual Fund </option>
+                              <option value= "102889">EC Home Loan AF</option>
+                              <option value= "102891">Assets Africa</option>
+                              <option value= "102892">SME</option>
+                              <option value= "102893">Housing Loan</option>
+                              <option value= "102900">Account Opening Process (Saudi Arabia)</option>
+                              <option value= "102901">Account Opening (Saudi Arabia)</option>
+                           </select>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>Employer :&nbsp;</td>
+                        <td>
+                           <select id="cust_4457" name="cust_4457" style="width:100px">
+                              <option value="0">-- Select Item --</option>
+                              <option value= "Government">Government</option>
+                              <option value= "Private">Private</option>
+                              <option value= "Public">Public</option>
+                           </select>
+                        </td>
+                        <td>Employement Type :&nbsp;</td>
+                        <td>
+                           <select id="cust_3915" name="cust_3915" style="width:100px">
+                              <option value="0">-- Select Item --</option>
+                              <option value= "Salaried">Salaried</option>
+                              <option value= "Self Employed">Self Employed</option>
+                           </select>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>Email :&nbsp;</td>
+                        <td>
+                            <input type="text" name="LE_EMAIL" class="textbox field__item" maxlength="510" data-autoid="LE_EMAIL_ctrl" value="">
+                        </td>
+                     </tr>
+                     <tr height="10px">
+                        <td>&nbsp;</td>
+                     </tr>
+                     <td>mobile number :&nbsp;</td>
+                        <td>
+                            <input type="text" name="LE_MOBILE" class="textbox field__item" maxlength="510" data-autoid="LE_MOBILE_ctrl" value="">
+                        </td>
+
+                       
+                     </div>
+                        </div>
+
+                        <td> (Lead Owner):&nbsp;</td>
+                        <td>
+                            <input name="LE_LEADOWNER"
+                            class="textbox field__item" data-autoid="LE_LEADOWNER_ctrl" value="Mr. James May">
+                        </td>
+                        
+                        <!-- <div data-attr-wt="0" class="form-element--group">
+                            <div class="form-element form-element--labelLeft filed-wrapper-cnt  " data-autoid="LE_LEADOWNER"><label
+                                    title="المالك الرئيسي (Lead Owner)" class="form-element__label" data-autoid="LE_LEADOWNER_lbl"
+                                    style="color: rgb(230, 25, 192);">المالك الرئيسي (Lead Owner)</label>
+                                <div class="form-element__control">
+                                    <div class="relative">
+                                        <div class="field relative w-100 field-mandatory onlyTextBox"><input name="LE_LEADOWNER"
+                                                class="textbox field__item" data-autoid="LE_LEADOWNER_ctrl" value="Mr. James May"><a
+                                                title="delete" class="field__item picker-icon" data-autoid="LE_LEADOWNER_del"><i
+                                                    class="icon  icon-acid-delete-bin"></i></a><a title="Search" class="field__item picker-icon"
+                                                data-autoid="LE_LEADOWNER_srch"><i class="icon icon-acid-search"></i></a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+
+                     <tr>
+                        <td colspan="4" align="center"> <input type="submit" name="submit" id="submit" value="Submit" onclick="return IsValidForm();" /> </td>
+                     </tr>
+                  </table>
+               </td>
             </tr>
-        </table>
-    </form>
-    <script>
-        function UpdateProductName() {
-  var prodObj = document.getElementById("Product");
-  var prodNameObj = document.getElementById("ProductName");
-  prodNameObj.value = prodObj.options[prodObj.selectedIndex].text;
-}
-function UpdateTerritoryName() {
-  var terrObj = document.getElementById("Territory");
-  var terrNameObj = document.getElementById("TerritoryName");
-  terrNameObj.value = terrObj.options[terrObj.selectedIndex].text;
-}
-function IsValidForm() {
-  var errMessage = "";
-  if (document.getElementById("Subject") != null) {
-    if (document.getElementById("Subject").value == "") {
-      errMessage = "Enter Subject.\n";
-    }
-  } else {
-    errMessage = "Subject Field is missing.\n";
-  }
-  if (errMessage != "") {
-    alert(errMessage);
-    return false;
-  }
-  return true;
-}
-
-    </script>
-
-    <!-- <script> function UpdateProductName() { var prodObj = document.getElementById('Product'); var prodNameObj = document.getElementById('ProductName'); prodNameObj.value = prodObj.options[prodObj.selectedIndex].text; } function UpdateTerritoryName() { var terrObj = document.getElementById('Territory'); var terrNameObj = document.getElementById('TerritoryName'); terrNameObj.value = terrObj.options[terrObj.selectedIndex].text; } function IsValidForm() { var errMessage = ''; if (document.getElementById('Subject') != null) { if (document.getElementById('Subject').value == '') { errMessage = 'Enter Subject.\n'; } } else { errMessage = 'Subject Field is missing.\n'; } if (document.getElementById('Company') != null) { if (document.getElementById('Company').value == '') { errMessage += 'Enter Company.\n'; } } else { errMessage += 'Company Field is missing.\n'; } if (errMessage != '') { alert(errMessage); return false; } return true; }</script> -->
-</body>
-
+         </table>
+      </form>
+      <script > function UpdateProductName() { var prodObj = document.getElementById('Product'); var prodNameObj = document.getElementById('ProductName'); prodNameObj.value = prodObj.options[prodObj.selectedIndex].text; } function UpdateTerritoryName() { var terrObj = document.getElementById('Territory'); var terrNameObj = document.getElementById('TerritoryName'); terrNameObj.value = terrObj.options[terrObj.selectedIndex].text; } function IsValidForm() { var errMessage = ''; if ( document.getElementById('LName').value == '') { errMessage = 'Enter LastName.\n'; } if (document.getElementById('Company').value == '') { errMessage += 'Enter Company.\n'; } if ( !IsValidEmail() ) { errMessage += 'Not a valid EmailID.\n'; } if ( !IsValidWebURL() ) { errMessage += 'Not a valid WebUrl.\n'; } if ( errMessage != '' ){ alert(errMessage); return false; } return true; } function IsValidEmail() { if (document.getElementById('Email') == null) return true; var inem = document.getElementById("Email").value; if( inem != null && inem !='') { var filter=/^(\w+(?:\.\w+)*)@((?:\w+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i; if ( !filter.test(inem) ) return false; } return true; } function IsValidWebURL() { return true; var website = document.getElementById("Website").value; var URL = /^((file|http):\/\/\S)*$/; if ( !URL.test(website) ) return false; return true; }</script>
+   </body>
 </html>
