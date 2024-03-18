@@ -3945,7 +3945,7 @@ h1 {
 
 .h2,
 h2 {
-    font-size: 3.125em
+    font-size: 2em
 }
 
 .h3,
@@ -13823,7 +13823,7 @@ button.bg-grey:hover {
 }
 
 .text-white {
-    color: #fff !important
+    color:#00106e !important
 }
 
 .text-primary {
@@ -13899,7 +13899,7 @@ a.text-dark:hover {
 }
 
 .text-white {
-    color: #fff !important
+    color:#00106e !important
 }
 
 a.text-white:focus,
