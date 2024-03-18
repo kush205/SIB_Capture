@@ -34882,7 +34882,7 @@ section.paybill-sec {
 }
 
 .contact-form-padding {
-    padding: 8.125em 5.625em 8.125em 12.5em
+    padding:1.125em 5em 1.125em 11.2em;
 }
 
 .form-wrapper {
@@ -35055,7 +35055,7 @@ section.paybill-sec {
 }
 
 .general-form .form-group {
-    margin: 0 0 3.125em
+    margin: 0 0 1.125em
 }
 
 .general-form .form-group small {
@@ -35265,7 +35265,7 @@ section.paybill-sec {
         padding: 5%
     }
     .contact-form-padding {
-        padding: 6.25em 7.5em 5.625em 4.375em
+        padding: 1.25em 7.5em 1.625em 4.375em
     }
     .left-side-creditcard {
         padding: 4.375em 3.125em 4.375em 3.75em
@@ -36078,14 +36078,14 @@ ul.checkbox-list li .add-more:after {
 }
 
 ul.contact-rightpoints {
-    padding: 6.25em 0;
+    padding: 1.25em 0;
     list-style: none;
     margin: 0
 }
 
 ul.contact-rightpoints li {
     border-bottom: 1px solid #d0d0d0;
-    padding: 2.5em 15em 2.5em 5em
+    padding: 0 15em 2.5em 5em
 }
 
 ul.contact-rightpoints li:last-child {
