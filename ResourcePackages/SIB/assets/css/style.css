@@ -36085,7 +36085,7 @@ ul.contact-rightpoints {
 
 ul.contact-rightpoints li {
     border-bottom: 1px solid #d0d0d0;
-    padding: 0 15em 2.5em 5em
+    padding: 3em 15em 0 5em;
 }
 
 ul.contact-rightpoints li:last-child {
@@ -36099,8 +36099,8 @@ ul.contact-rightpoints .icon-para {
 
 ul.contact-rightpoints .icon-para .contact-icon {
     position: absolute;
-    left: 0;
-    top: .5em;
+    left: 15;
+    top: 1.6em;
     width: 3.0625em;
     height: 3.0625em;
     display: inline-block
