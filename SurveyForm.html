@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+        }
+        h1 {
+            text-align: center;
+            color: #333333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333333;
+        }
+        input[type="text"], input[type="email"], textarea, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        textarea {
+            resize: vertical;
+        }
+        .radio-group, .checkbox-group {
+            display: flex;
+            flex-direction: column;
+        }
+        .radio-group label, .checkbox-group label {
+            display: flex;
+            align-items: center;
+        }
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <form
+        action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdJ-Xtjq1Cr1zFiqqK6DDdALSsB1LYandrpKEyW4dEAvttEag/formResponse"
+    >
+<div class="container">
+    <h1>Customer Satisfaction Survey</h1>
+    <form action="/submit-survey" method="post">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="entry.648521998" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="emailAddress" required>
+        </div>
+        <div class="form-group">
+            <label for="age">Age:</label>
+            <select id="age" name="entry.1551654410" required>
+                <option value="">Select your age range</option>
+                <option value="18-25">18-25</option>
+                <option value="26-35">26-35</option>
+                <option value="36-45">36-45</option>
+                <option value="46-60">46-60</option>
+                <option value="60+">60+</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Gender:</label>
+            <div class="radio-group">
+                <label><input type="radio" name="gender" value="male" required> Male</label>
+                <label><input type="radio" name="gender" value="female"> Female</label>
+                <label><input type="radio" name="gender" value="other"> Other</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>How satisfied are you with our service?</label>
+            <div class="radio-group">
+                <label><input type="radio" name="entry.91285848" value="1717098348695" required> Very Satisfied</label>
+                <label><input type="radio" name="entry.91285848" value="1717098366357"> Satisfied</label>
+                <label><input type="radio" name="entry.91285848" value="1717098375960"> Neutral</label>
+                <label><input type="radio" name="entry.91285848" value="1717098385568"> Dissatisfied</label>
+                <label><input type="radio" name="entry.91285848" value="1717098395722"> Very Dissatisfied</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>What aspects of our service do you find satisfactory? (Check all that apply)</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="entry.1508946327" value="1717098413922"> Customer Service</label>
+                <label><input type="checkbox" name="entry.1508946327" value="product_quality"> Product Quality</label>
+                <label><input type="checkbox" name="entry.1508946327" value="pricing"> Pricing</label>
+                <label><input type="checkbox" name="entry.1508946327" value="website"> Website Usability</label>
+                <label><input type="checkbox" name="entry.1508946327" value="other"> Other</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="comments">Additional Comments:</label>
+            <textarea id="comments" name="entry.1967224069" rows="4"></textarea>
+        </div>
+        <div class="form-group">
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
