@@ -52,6 +52,21 @@
             font-size: 18px;
             color: #555;
         }
+        #retryButton {
+            display: none;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #28a745;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        #retryButton:hover {
+            background-color: #218838;
+        }
         @media (max-width: 600px) {
             img {
                 width: 100px;
@@ -66,6 +81,7 @@
             }
         }
     </style>
+    <script defer src="https://cdn.jsdelivr.net/npm/face-api.js"></script>
 </head>
 <body>
     <h1>Face Match Demo</h1>
@@ -73,19 +89,37 @@
     <button id="startCameraButton">Start Camera</button>
     <video id="video" autoplay></video>
     <div id="status"></div>
+    <button id="retryButton">Retry</button>
 
     <script>
         const startCameraButton = document.getElementById('startCameraButton');
         const video = document.getElementById('video');
         const statusDiv = document.getElementById('status');
         const sampleImage = document.getElementById('sampleImage');
+        const retryButton = document.getElementById('retryButton');
 
-        startCameraButton.addEventListener('click', async () => {
+        // Load face-api.js models
+        Promise.all([
+            faceapi.nets.tinyFaceDetector.loadFromUri('/models'),
+            faceapi.nets.faceLandmark68Net.loadFromUri('/models'),
+            faceapi.nets.faceRecognitionNet.loadFromUri('/models')
+        ]).then(() => {
+            console.log('Face-api.js models loaded');
+        }).catch(err => {
+            console.error('Error loading face-api.js models:', err);
+        });
+
+        startCameraButton.addEventListener('click', startCamera);
+        retryButton.addEventListener('click', startCamera);
+
+        async function startCamera() {
             try {
                 const stream = await navigator.mediaDevices.getUserMedia({ video: true });
                 video.srcObject = stream;
                 video.style.display = 'block';
                 startCameraButton.style.display = 'none';
+                retryButton.style.display = 'none';
+                statusDiv.textContent = '';
 
                 setTimeout(() => {
                     captureAndMatchFace();
@@ -95,19 +129,37 @@
                 statusDiv.textContent = 'Error accessing camera';
                 statusDiv.style.color = 'red';
             }
-        });
+        }
 
-        function captureAndMatchFace() {
+        async function captureAndMatchFace() {
+            const sampleImageElement = await faceapi.fetchImage(sampleImage.src);
+            const sampleImageDetection = await faceapi.detectSingleFace(sampleImageElement).withFaceLandmarks().withFaceDescriptor();
+
+            if (!sampleImageDetection) {
+                statusDiv.textContent = 'No face detected in sample image.';
+                statusDiv.style.color = 'red';
+                return;
+            }
+
             const canvas = document.createElement('canvas');
             canvas.width = video.videoWidth;
             canvas.height = video.videoHeight;
             const context = canvas.getContext('2d');
             context.drawImage(video, 0, 0, canvas.width, canvas.height);
             const capturedImage = canvas.toDataURL('image/png');
+            const capturedImageElement = await faceapi.fetchImage(capturedImage);
+            const capturedImageDetection = await faceapi.detectSingleFace(capturedImageElement).withFaceLandmarks().withFaceDescriptor();
 
-            const facesMatch = fakeFaceMatch(sampleImage.src, capturedImage);
+            if (!capturedImageDetection) {
+                statusDiv.textContent = 'No face detected in captured image.';
+                statusDiv.style.color = 'red';
+                return;
+            }
 
-            if (facesMatch) {
+            const distance = faceapi.euclideanDistance(sampleImageDetection.descriptor, capturedImageDetection.descriptor);
+            const threshold = 0.6; // You can adjust the threshold based on your requirement
+
+            if (distance < threshold) {
                 statusDiv.textContent = 'Faces match!';
                 statusDiv.style.color = 'green';
             } else {
@@ -119,10 +171,7 @@
             const tracks = stream.getTracks();
             tracks.forEach(track => track.stop());
             video.style.display = 'none';
-        }
-
-        function fakeFaceMatch(sample, captured) {
-            return Math.random() > 0.5;
+            retryButton.style.display = 'block';
         }
     </script>
 </body>
