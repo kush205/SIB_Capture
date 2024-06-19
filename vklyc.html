@@ -3,113 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VKYC</title>
+    <title>Face Match Demo</title>
     <style>
-        body, html {
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
             margin: 0;
-            padding: 0;
+            background: #f0f2f5;
+        }
+        h1 {
+            color: #333;
+        }
+        img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        video {
+            display: none;
             width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: Arial, sans-serif;
+            max-width: 300px;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-
-        .container {
-            display: flex;
-            flex-direction: row;
-            width: 100%;
-            height: 100%;
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
         }
-
-        .image-container, .camera-container {
-            width: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        button:hover {
+            background-color: #0056b3;
         }
-
-        .image-container img {
-            max-width: 100%;
-            max-height: 100%;
+        #status {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #555;
         }
-
-        .camera-container video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .status-container {
-            position: absolute;
-            top: 10px;
-            width: 100%;
-            text-align: center;
-            font-size: 20px;
-            font-weight: bold;
-            color: white;
+        @media (max-width: 600px) {
+            img {
+                width: 100px;
+                height: 100px;
+            }
+            button {
+                font-size: 14px;
+                padding: 8px 16px;
+            }
+            video {
+                max-width: 100%;
+            }
         }
     </style>
-    <script defer src="https://cdn.jsdelivr.net/npm/face-api.js"></script>
 </head>
 <body>
-    <div class="status-container" id="status">Loading...</div>
-    <div class="container">
-        <div class="image-container">
-            <img id="fixed-image" src="https://media.licdn.com/dms/image/C5603AQF8Msdtl6V7Kg/profile-displayphoto-shrink_800_800/0/1516353747418?e=1724284800&v=beta&t=UCN6DTozTBDjOuiRfmGFRs8ecP-yuSpdozVAnG8-tJ4" alt="Fixed Image">
-        </div>
-        <div class="camera-container">
-            <video id="video" autoplay playsinline></video>
-        </div>
-    </div>
-    <script>
-        document.addEventListener("DOMContentLoaded", async () => {
-            const statusElement = document.getElementById('status');
-            const video = document.getElementById('video');
+    <h1>Face Match Demo</h1>
+    <img id="sampleImage" src="https://media.licdn.com/dms/image/C5603AQF8Msdtl6V7Kg/profile-displayphoto-shrink_800_800/0/1516353747418?e=1724284800&v=beta&t=UCN6DTozTBDjOuiRfmGFRs8ecP-yuSpdozVAnG8-tJ4" alt="Sample Image">
+    <button id="startCameraButton">Start Camera</button>
+    <video id="video" autoplay></video>
+    <div id="status"></div>
 
+    <script>
+        const startCameraButton = document.getElementById('startCameraButton');
+        const video = document.getElementById('video');
+        const statusDiv = document.getElementById('status');
+        const sampleImage = document.getElementById('sampleImage');
+
+        startCameraButton.addEventListener('click', async () => {
             try {
-                // Request access to the device's camera
                 const stream = await navigator.mediaDevices.getUserMedia({ video: true });
                 video.srcObject = stream;
+                video.style.display = 'block';
+                startCameraButton.style.display = 'none';
 
-                // Load face-api.js models
-                await faceapi.nets.tinyFaceDetector.loadFromUri('/models');
-                await faceapi.nets.faceLandmark68Net.loadFromUri('/models');
-                await faceapi.nets.faceRecognitionNet.loadFromUri('/models');
-
-                const fixedImage = document.getElementById('fixed-image');
-                const fixedImageResults = await faceapi.detectSingleFace(fixedImage).withFaceLandmarks().withFaceDescriptor();
-
-                video.addEventListener('play', async () => {
-                    const displaySize = { width: video.width, height: video.height };
-                    faceapi.matchDimensions(video, displaySize);
-
-                    setInterval(async () => {
-                        const detections = await faceapi.detectSingleFace(video, new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks().withFaceDescriptor();
-
-                        if (detections && fixedImageResults) {
-                            const distance = faceapi.euclideanDistance(fixedImageResults.descriptor, detections.descriptor);
-
-                            if (distance < 0.6) { // Threshold value can be adjusted
-                                statusElement.textContent = "Faces match";
-                                statusElement.style.color = "green";
-                            } else {
-                                statusElement.textContent = "Faces do not match";
-                                statusElement.style.color = "red";
-                            }
-                        } else {
-                            statusElement.textContent = "No face detected";
-                            statusElement.style.color = "yellow";
-                        }
-                    }, 1000);
-                });
+                setTimeout(() => {
+                    captureAndMatchFace();
+                }, 3000);
             } catch (err) {
-                console.error("Error accessing camera or loading models: ", err);
-                statusElement.textContent = "Error accessing camera or loading models";
-                statusElement.style.color = "red";
+                console.error('Error accessing camera: ', err);
+                statusDiv.textContent = 'Error accessing camera';
+                statusDiv.style.color = 'red';
             }
         });
+
+        function captureAndMatchFace() {
+            const canvas = document.createElement('canvas');
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+            const context = canvas.getContext('2d');
+            context.drawImage(video, 0, 0, canvas.width, canvas.height);
+            const capturedImage = canvas.toDataURL('image/png');
+
+            const facesMatch = fakeFaceMatch(sampleImage.src, capturedImage);
+
+            if (facesMatch) {
+                statusDiv.textContent = 'Faces match!';
+                statusDiv.style.color = 'green';
+            } else {
+                statusDiv.textContent = 'Faces do not match.';
+                statusDiv.style.color = 'red';
+            }
+
+            const stream = video.srcObject;
+            const tracks = stream.getTracks();
+            tracks.forEach(track => track.stop());
+            video.style.display = 'none';
+        }
+
+        function fakeFaceMatch(sample, captured) {
+            return Math.random() > 0.5;
+        }
     </script>
 </body>
 </html>
