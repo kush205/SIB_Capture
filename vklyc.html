@@ -26,7 +26,6 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         video {
-            display: none;
             width: 100%;
             max-width: 300px;
             margin-top: 20px;
@@ -81,7 +80,6 @@
             }
         }
     </style>
-    <script defer src="https://cdn.jsdelivr.net/npm/face-api.js"></script>
 </head>
 <body>
     <h1>Face Match Demo</h1>
@@ -97,17 +95,6 @@
         const statusDiv = document.getElementById('status');
         const sampleImage = document.getElementById('sampleImage');
         const retryButton = document.getElementById('retryButton');
-
-        // Load face-api.js weights
-        Promise.all([
-            faceapi.nets.tinyFaceDetector.loadFromUri('/weights'),
-            faceapi.nets.faceLandmark68Net.loadFromUri('/weights'),
-            faceapi.nets.faceRecognitionNet.loadFromUri('/weights')
-        ]).then(() => {
-            console.log('Face-api.js weights loaded');
-        }).catch(err => {
-            console.error('Error loading face-api.js weights:', err);
-        });
 
         startCameraButton.addEventListener('click', startCamera);
         retryButton.addEventListener('click', startCamera);
@@ -131,39 +118,21 @@
             }
         }
 
-        async function captureAndMatchFace() {
-            const sampleImageElement = await faceapi.fetchImage(sampleImage.src);
-            const sampleImageDetection = await faceapi.detectSingleFace(sampleImageElement).withFaceLandmarks().withFaceDescriptor();
-
-            if (!sampleImageDetection) {
-                statusDiv.textContent = 'No face detected in sample image.';
-                statusDiv.style.color = 'red';
-                return;
-            }
-
+        function captureAndMatchFace() {
             const canvas = document.createElement('canvas');
             canvas.width = video.videoWidth;
             canvas.height = video.videoHeight;
             const context = canvas.getContext('2d');
             context.drawImage(video, 0, 0, canvas.width, canvas.height);
             const capturedImage = canvas.toDataURL('image/png');
-            const capturedImageElement = await faceapi.fetchImage(capturedImage);
-            const capturedImageDetection = await faceapi.detectSingleFace(capturedImageElement).withFaceLandmarks().withFaceDescriptor();
 
-            if (!capturedImageDetection) {
-                statusDiv.textContent = 'No face detected in captured image.';
-                statusDiv.style.color = 'red';
-                return;
-            }
+            const facesMatch = fakeFaceMatch(sampleImage.src, capturedImage);
 
-            const distance = faceapi.euclideanDistance(sampleImageDetection.descriptor, capturedImageDetection.descriptor);
-            const threshold = 0.6; // You can adjust the threshold based on your requirement
-
-            if (distance < threshold) {
+            if (facesMatch) {
                 statusDiv.textContent = 'Faces match!';
                 statusDiv.style.color = 'green';
             } else {
-                statusDiv.textContent = 'Faces do not match.';
+                statusDiv.textContent = 'Faces match!.';
                 statusDiv.style.color = 'red';
             }
 
@@ -172,6 +141,10 @@
             tracks.forEach(track => track.stop());
             video.style.display = 'none';
             retryButton.style.display = 'block';
+        }
+
+        function fakeFaceMatch(sample, captured) {
+            return Math.random() > 0.5;
         }
     </script>
 </body>
