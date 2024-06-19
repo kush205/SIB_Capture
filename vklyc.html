@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VKYC</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: 100%;
+        }
+
+        .image-container, .camera-container {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .camera-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+    <script defer src="https://cdn.jsdelivr.net/npm/face-api.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="image-container">
+            <img id="fixed-image" src="https://media.licdn.com/dms/image/C5603AQF8Msdtl6V7Kg/profile-displayphoto-shrink_800_800/0/1516353747418?e=1724284800&v=beta&t=UCN6DTozTBDjOuiRfmGFRs8ecP-yuSpdozVAnG8-tJ4" alt="Fixed Image">
+        </div>
+        <div class="camera-container">
+            <video id="video" autoplay playsinline></video>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", async () => {
+            try {
+                // Load face-api.js models
+                await faceapi.nets.tinyFaceDetector.loadFromUri('/models');
+                await faceapi.nets.faceLandmark68Net.loadFromUri('/models');
+                await faceapi.nets.faceRecognitionNet.loadFromUri('/models');
+
+                const video = document.getElementById('video');
+                const fixedImage = document.getElementById('fixed-image');
+
+                // Request access to the device's camera
+                const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+                video.srcObject = stream;
+
+                // Detect face in the fixed image
+                const fixedImageResults = await faceapi.detectSingleFace(fixedImage).withFaceLandmarks().withFaceDescriptor();
+
+                video.addEventListener('play', async () => {
+                    const displaySize = { width: video.width, height: video.height };
+                    faceapi.matchDimensions(video, displaySize);
+
+                    setInterval(async () => {
+                        const detections = await faceapi.detectSingleFace(video, new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks().withFaceDescriptor();
+
+                        if (detections && fixedImageResults) {
+                            const distance = faceapi.euclideanDistance(fixedImageResults.descriptor, detections.descriptor);
+
+                            if (distance < 0.6) { // Threshold value can be adjusted
+                                console.log("Faces match");
+                            } else {
+                                console.log("Faces do not match");
+                            }
+                        }
+                    }, 1000);
+                });
+            } catch (err) {
+                console.error("Error accessing camera or loading models: ", err);
+            }
+        });
+    </script>
+</body>
+</html>
