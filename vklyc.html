@@ -98,15 +98,15 @@
         const sampleImage = document.getElementById('sampleImage');
         const retryButton = document.getElementById('retryButton');
 
-        // Load face-api.js models
+        // Load face-api.js weights
         Promise.all([
-            faceapi.nets.tinyFaceDetector.loadFromUri('/models'),
-            faceapi.nets.faceLandmark68Net.loadFromUri('/models'),
-            faceapi.nets.faceRecognitionNet.loadFromUri('/models')
+            faceapi.nets.tinyFaceDetector.loadFromUri('/weights'),
+            faceapi.nets.faceLandmark68Net.loadFromUri('/weights'),
+            faceapi.nets.faceRecognitionNet.loadFromUri('/weights')
         ]).then(() => {
-            console.log('Face-api.js models loaded');
+            console.log('Face-api.js weights loaded');
         }).catch(err => {
-            console.error('Error loading face-api.js models:', err);
+            console.error('Error loading face-api.js weights:', err);
         });
 
         startCameraButton.addEventListener('click', startCamera);
