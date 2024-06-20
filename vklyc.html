@@ -113,7 +113,7 @@
                 }, 3000);
             } catch (err) {
                 console.error('Error accessing camera: ', err);
-                statusDiv.textContent = 'Error accessing camera';
+                statusDiv.textContent = 'Error accessing camera. Please ensure permissions are granted.';
                 statusDiv.style.color = 'red';
             }
         }
@@ -132,7 +132,7 @@
                 statusDiv.textContent = 'Faces match!';
                 statusDiv.style.color = 'green';
             } else {
-                statusDiv.textContent = 'Faces match!.';
+                statusDiv.textContent = 'Faces do not match.';
                 statusDiv.style.color = 'red';
             }
 
