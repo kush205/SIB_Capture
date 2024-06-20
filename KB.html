@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Payment Methods</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        .accordion {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .accordion-item {
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .accordion-title {
+            cursor: pointer;
+            padding: 15px 20px;
+            background: #007bff;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .accordion-title:hover {
+            background: #0056b3;
+        }
+        .accordion-content {
+            padding: 20px;
+            display: none;
+            background: #fafafa;
+        }
+        .accordion-content p, .accordion-content ol, .accordion-content ul {
+            margin: 10px 0;
+        }
+        .accordion-content h3 {
+            color: #bd1818;
+        }
+        .accordion-content a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .accordion-content a:hover {
+            text-decoration: underline;
+        }
+        .accordion-title::after {
+            content: '+';
+            font-size: 24px;
+        }
+        .accordion-item.active .accordion-title::after {
+            content: '-';
+        }
+        .accordion-item.active .accordion-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="accordion">
+        <div class="accordion-item">
+            <div class="accordion-title">Mga paraan para magbayad ng BanKo loan</div>
+            <div class="accordion-content">
+                <p>Maraming paraan para mabayaran ang inyong BanKo loan. Siguraduhing mabayaran ang inyong due amount bago o sa araw ng due date para mapanatili ang inyong good payment history.</p>
+                <ol>
+                    <li>
+                        <h3>Repayment by Self via BanKo Mobile</h3>
+                        <p>Gamit ang inyong cellphone, pwedeng bayaran ang inyong loan. Kailangang mag-register sa BanKo mobile at siguraduhing laging may sapat na balanse ang PondoKo Savings account pambayad ng loan.</p>
+                    </li>
+                    <li>
+                        <h3>BanKo Cash Agents</h3>
+                        <p>Punta lang sa pinakamalapit na BanKo Cash Agent para magbayad. Ibigay lang ang inyong BanKo loan account number at ang halaga ng inyong babayaran. Ang payment ay agad na ma-a-apply sa loan.</p>
+                        <p>Click this link for the complete list of BanKo Cash Agents: <a href="https://www.banko.com.ph/banko-locator/">https://www.banko.com.ph/banko-locator/</a></p>
+                    </li>
+                    <li>
+                        <h3>Automatic Debit Arrangement</h3>
+                        <p>Ang due amount ng inyong loan ay automatic na ibabawas sa inyong PondoKo Savings account. Siguraduhing laging may sapat na balanse ang account.</p>
+                    </li>
+                    <li>
+                        <h3>Cash Pick-Up via Motorized Collector</h3>
+                        <p>Maaaring mag-request ng cash pick-up arrangement kung saan pupuntahan kayo ng aming Motorized Collector para tanggapin ang inyong bayad. May one-time fee na kailangan bayaran para mag-avail ng service na ito.</p>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-title">Paano magbayad ng BanKo loan gamit ang BanKo Mobile</div>
+            <div class="accordion-content">
+                <h3>Ano ang kailangan:</h3>
+                <ul>
+                    <li>Dapat registered sa BanKo Mobile</li>
+                    <li>Sapat na balanse sa PondoKo Savings</li>
+                    <li>Touchscreen phone</li>
+                    <li>Data plan or WIFI</li>
+                </ul>
+                <h3>Steps:</h3>
+                <ol>
+                    <li>Mag-log in sa BanKo Mobile App gamit ang Username at Password</li>
+                    <li>I-click ang “Loan” sa upper right portion ng screen</li>
+                    <li>Piliin ang “Repayment by Self”</li>
+                    <li>Kumpletohin ang mga detalye at piliin kung “Due Amount” o “Other Amount” base sa halaga ng babayaran</li>
+                    <li>I-review ang mga detalye at i-click and “Submit”</li>
+                    <li>Makikita ang “Repayment Successfully Processed” ibig sabihin nito ay na-irecord na sa BanKo ang inyong payment</li>
+                    <li>I-check ang loan balance para makita kung na-apply ang payment sa loan</li>
+                </ol>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-title">Paano magbayad ng BanKo loan sa BanKo Cash Agent</div>
+            <div class="accordion-content">
+                <h3>Ano ang kailangan:</h3>
+                <ul>
+                    <li>BanKo NegosyoKo Loan Account Number</li>
+                    <li>Sapat na halaga pambayad ng loan</li>
+                </ul>
+                <h3>Steps:</h3>
+                <ol>
+                    <li>Pumunta sa alinmang accredited BanKo Cash Agent (BCA)</li>
+                    <li>Sabihin sa BCA Teller na kayo ay “mag-ba-bayad ng <strong>BanKo Loan</strong>”</li>
+                    <li>Ibigay ang BanKo 15-digit NegosyoKo Loan Account Number sa BCA Teller at ang halaga ng ibabayad</li>
+                    <li>Mag bibigay ng confirmation ang BCA Teller na ang bayad ay na-process na</li>
+                    <li>Ang bayad ay agad na ma-a-apply sa loan</li>
+                </ol>
+                <p>Click this link for the complete list of BanKo Cash Agents: <a href="https://www.banko.com.ph/banko-locator/">https://www.banko.com.ph/banko-locator/</a></p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-title">Paano i-monitor ang BanKo Loan</div>
+            <div class="accordion-content">
+                <p>Kapag ang inyong loan ay na-approve, bibigyan kayo ng schedule of amortization bilang gabay kung kailan ang due date at kung magkano ang kailangang bayaran. Makakatanggap din kayo ng NegosyoKo Loan booklet kung saan maaaring itala ang ang inyong mga payments.</p>
+                <p>Bukod sa mga ito, maaari nyo ring ma-monitor ang inyong BanKo loan gamit ang inyong cellphone. Mag register sa BanKo Mobile para ma-access ang mga sumusunod:</p>
+                <ul>
+                    <li>Repayment by Self – gamitin ito para mag bayad ng loan gamit ang cellphone</li>
+                    <li>Repayment Schedule – dito makikita and due dates at kung magkano ang dapat bayaran</li>
+                    <li>Transaction History – dito naka record ang mga payments na nagawa na</li>
+                </ul>
+                <h3>Ano ang kailangan:</h3>
+                <ul>
+                    <li>Dapat registered as BanKo Mobile</li>
+                    <li>Touchscreen phone</li>
+                    <li>Data plan or WIFI</li>
+                </ul>
+                <h3>Steps:</h3>
+                <ol>
+                    <li>Mag-log in sa BanKo Mobile App gamit ang Username at Password</li>
+                    <li>Iclick ang “Loan” sa upper right portion ng screen.</li>
+                    <li>Piliin ang:
+                        <ul>
+                            <li><strong>Repayment by Self</strong> – kung nais magbayad ng loan</li>
+                            <li><strong>Repayment Schedule</strong> – kung nais malaman kung kailan ang susunod na due date</li>
+                            <li><strong>Transaction History</strong> – para makita ang nga nagawang bayad</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.accordion-title').forEach(item => {
+            item.addEventListener('click', () => {
+                const parent = item.parentElement;
+                parent.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
